@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    
+</head>
+<style>
+    .mid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        padding-left: 500px;
+        padding-right: 500px;
+    }
+    body{
+        background-color:whitesmoke;
+    }
+    .btn{
+        padding: 10px;
+        border-radius: 10px;
+        color:black;
+        background-color:rgb(133, 121, 55);
+        width: 100px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .btn:hover{
+        background-color:rgb(211, 198, 122);
+        font-size: 13px;
+    }
+    h1{
+        size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-content: center;
+    }
+    .m{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-weight: 100;
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1>Lets Play</h1>
+    <div class="mid"><button class="btn" onclick="rock()">Rock</button>
+    <button class="btn" onclick="paper()">Paper</button>
+    <button class="btn" onclick="scisor()">Scissors</button></div>
+    <div class="m" id="user" >Congraturations You WON !!</div>
+    <div class="m" id="comp">Computer WON Better Luck Next Time</div>
+    <div class="m" id="draw">Its a Draw</div>
+    <script>
+        let name =prompt("Enter your name ?","Rohan");
+        document.getElementById("user").style.visibility="hidden";
+        document.getElementById("comp").style.visibility="hidden";
+        document.getElementById("draw").style.visibility="hidden";
+        function paper()
+        {
+            let list=["Rock", "Paper" ,"Scissor"];
+            let user_input="paper";
+            let comp_choice=list[Math.floor( Math.random()*10)%3];
+        console.log(`Computer : ${comp_choice.toUpperCase()}`);
+        console.log(`${name} : ${user_input.toUpperCase()}`);
+        let t1=user_input[0].toUpperCase(),t2=comp_choice[0].toUpperCase();
+        if((t1=="R" && t2=="R") || (t1=="P" && t2=="P") || (t1=="S" && t2=="S"))
+        {
+            console.log(`Its a Draw`);
+            document.getElementById("draw").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("comp").style.visibility="hidden";
+        }
+        else if((t1=="R" && t2=="P") || (t1=="S" && t2=="R") || (t1=="P" && t2=="S") )
+        {
+            console.log("Computer ji WON !!");
+            document.getElementById("comp").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else if((t2=="R" && t1=="P") || (t2=="S" && t1=="R") || (t2=="P" && t1=="S")){
+        console.log(`${name} WON !!`);
+        document.getElementById("user").style.visibility="visible";
+        document.getElementById("comp").style.visibility="hidden";
+        document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else{
+            console.log("Enter a valid choice !");
+        }
+
+        }
+        function scisor()
+        {
+            let list=["Rock", "Paper" ,"Scissor"];
+            let user_input="scisor";
+            let comp_choice=list[Math.floor( Math.random()*10)%3];
+        console.log(`Computer : ${comp_choice.toUpperCase()}`);
+        console.log(`${name} : ${user_input.toUpperCase()}`);
+        let t1=user_input[0].toUpperCase(),t2=comp_choice[0].toUpperCase();
+        if((t1=="R" && t2=="R") || (t1=="P" && t2=="P") || (t1=="S" && t2=="S"))
+        {
+            console.log(`Its a Draw`);
+            document.getElementById("draw").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("comp").style.visibility="hidden";
+        }
+        else if((t1=="R" && t2=="P") || (t1=="S" && t2=="R") || (t1=="P" && t2=="S") )
+        {
+            console.log("Computer ji WON !!");
+            document.getElementById("comp").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else if((t2=="R" && t1=="P") || (t2=="S" && t1=="R") || (t2=="P" && t1=="S")){
+        console.log(`${name} WON !!`);
+        document.getElementById("user").style.visibility="visible";
+        document.getElementById("comp").style.visibility="hidden";
+        document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else{
+            console.log("Enter a valid choice !");
+        }
+
+        }
+        function rock()
+        {
+            let list=["Rock", "Paper" ,"Scissor"];
+            let user_input="rock";
+            let comp_choice=list[Math.floor( Math.random()*10)%3];
+        console.log(`Computer : ${comp_choice.toUpperCase()}`);
+        console.log(`${name} : ${user_input.toUpperCase()}`);
+        let t1=user_input[0].toUpperCase(),t2=comp_choice[0].toUpperCase();
+        if((t1=="R" && t2=="R") || (t1=="P" && t2=="P") || (t1=="S" && t2=="S"))
+        {
+            console.log(`Its a Draw`);
+            document.getElementById("draw").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("comp").style.visibility="hidden";
+        }
+        else if((t1=="R" && t2=="P") || (t1=="S" && t2=="R") || (t1=="P" && t2=="S") )
+        {
+            console.log("Computer ji WON !!");
+            document.getElementById("comp").style.visibility="visible";
+            document.getElementById("user").style.visibility="hidden";
+            document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else if((t2=="R" && t1=="P") || (t2=="S" && t1=="R") || (t2=="P" && t1=="S")){
+        console.log(`${name} WON !!`);
+        document.getElementById("user").style.visibility="visible";
+        document.getElementById("comp").style.visibility="hidden";
+        document.getElementById("draw").style.visibility="hidden";
+        }
+        
+        else{
+            console.log("Enter a valid choice !");
+        }
+
+        }
+        
+
+
+    </script>
+</body>
+</html>
